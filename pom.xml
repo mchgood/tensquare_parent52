@@ -10,6 +10,7 @@
     <modules>
         <module>tensquare_common</module>
         <module>tensquare_base</module>
+        <module>tensquare_recruit</module>
     </modules>
     <!-- 标记次pom为父工程 -->
     <packaging>pom</packaging>
