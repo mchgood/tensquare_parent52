@@ -119,6 +119,7 @@ public class ArticleService {
 	 * @param article
 	 */
 	public void update(Article article) {
+		redisTemplate.delete("article" + article.getId());
 		articleDao.save(article);
 	}
 
@@ -127,6 +128,7 @@ public class ArticleService {
 	 * @param id
 	 */
 	public void deleteById(String id) {
+		redisTemplate.delete("article" + id);
 		articleDao.deleteById(id);
 	}
 
