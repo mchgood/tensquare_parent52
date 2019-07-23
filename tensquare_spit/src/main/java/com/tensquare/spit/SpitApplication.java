@@ -1,15 +1,20 @@
-package com.tensquare.gathering;
+package com.tensquare.spit;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 import util.IdWorker;
-@EnableCaching//启动缓存
+
+/**
+ * @auther: tangkc
+ * @Date: 2019/7/23 21:49
+ * @Description:
+ */
 @SpringBootApplication
-public class GatherApplication {
+public class SpitApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(GatherApplication.class, args);
+		SpringApplication.run(SpitApplication.class,args);
 	}
 
 	@Bean
