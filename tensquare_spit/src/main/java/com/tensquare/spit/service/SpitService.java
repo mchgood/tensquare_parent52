@@ -99,13 +99,13 @@ public class SpitService {
 	}
 
 	public void thumbup(String spitId) {
-		// 方式一，效率低，先查，修改后再存
+//		 方式一，效率低，先查，修改后再存
 //        Spit spit = spitDao.findById(spitId).get();
 //        spit.setThumbup((spit.getThumbup() == null ? 0 : spit.getThumbup()) + 1);
 //        spitDao.save(spit);
-
-		// 方式二：使用原生mongo命令来实现自增，只有一次数据库交互操作
-		// db.spit.update({"_id": "1"}, {$inc: {thumbup:NumberInt(1)}})
+//
+//		 方式二：使用原生mongo命令来实现自增，只有一次数据库交互操作
+//		 db.spit.update({"_id": "1"}, {$inc: {thumbup:NumberInt(1)}})
 		Query query = new Query();
 		query.addCriteria(Criteria.where("_id").is(1));
 		Update update = new Update();
